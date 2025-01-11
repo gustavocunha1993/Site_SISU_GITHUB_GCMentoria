@@ -1,0 +1,166 @@
+body {
+    background-color: #e8f5e9; /* Verde claro para o fundo */
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0b644e;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Impede que os itens quebrem para a próxima linha */
+}
+
+header img {
+    width: 120px;
+    height: auto;
+}
+
+.logo-direita {
+    width: 200px;
+    height: auto;
+}
+
+h1 {
+    color: #fff;
+    margin: 0;
+    text-align: center;
+    flex-grow: 1; /* Permite que o título ocupe o espaço restante */
+    white-space: nowrap; /* Impede quebra de linha */
+    padding: 0 20px; /* Adiciona espaço ao redor do texto */
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+form, #resultado {
+    background-color: white; /* Define a cor de fundo como branco para os formulários e a seção de resultados */
+    padding: 20px; /* Adiciona um espaço interno de 20px ao redor do conteúdo */
+    border-radius: 5px; /* Arredonda os cantos dos elementos com um raio de 5px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave ao redor dos elementos para dar profundidade */
+    margin-bottom: 20px; /* Adiciona um espaço de 20px abaixo dos elementos */
+    color: #333; /* Define a cor do texto como um tom de cinza escuro */
+}
+
+label {
+    display: block; /* Faz com que o rótulo ocupe toda a largura disponível, iniciando em uma nova linha */
+    margin: 10px 0 5px; /* Adiciona margem de 10px acima e 5px abaixo do rótulo */
+    color: #0b644e; /* Verde escuro para a cor do texto do rótulo */
+    font-weight: bold; /* Define o texto do rótulo como negrito */
+}
+
+input[type="number"], select {
+    width: 97%; /* Define a largura dos campos de entrada e seleção para 97% do contêiner */
+    padding: 10px; /* Adiciona espaço interno de 10px ao redor do conteúdo dos campos */
+    margin-bottom: 15px; /* Adiciona um espaço de 15px abaixo dos campos */
+    border-radius: 5px; /* Arredonda os cantos dos campos com um raio de 5px */
+    border: 1px solid #ccc; /* Define uma borda cinza clara ao redor dos campos */
+    font-size: 1em; /* Define o tamanho da fonte dos campos */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Adiciona uma transição suave ao alterar a cor da borda e a sombra */
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #0ca0a8; /* Altera a cor da borda para verde intermediário quando o campo está em foco */
+    box-shadow: 0 0 5px rgba(12, 160, 168, 0.5); /* Adiciona uma sombra ao redor do campo quando está em foco */
+}
+
+button {
+    background-color: #0ca0a8; /* Define a cor de fundo do botão como verde intermediário */
+    color: white; /* Define a cor do texto do botão como branco */
+    padding: 10px 20px; /* Adiciona espaço interno de 10px nas laterais e 20px no topo/baixo */
+    border: none; /* Remove qualquer borda do botão */
+    border-radius: 5px; /* Arredonda os cantos do botão com um raio de 5px */
+    cursor: pointer; /* Muda o cursor para indicar que o botão é clicável */
+    font-size: 1em; /* Define o tamanho da fonte do texto do botão */
+    transition: background-color 0.3s; /* Adiciona uma transição suave ao alterar a cor de fundo do botão */
+}
+
+button:hover {
+    background-color: #036b29; /* Altera a cor de fundo do botão para um verde mais escuro quando o mouse passa sobre ele */
+}
+
+ul {
+    list-style-type: disc; /* Define o estilo de lista com marcadores de disco para listas não ordenadas */
+    padding-left: 20px; /* Ajusta o recuo à esquerda para o conteúdo da lista */
+}
+
+li {
+    margin-bottom: 10px; /* Adiciona um espaço de 10px abaixo de cada item da lista */
+    break-inside: avoid; /* Evita quebra dentro de colunas */
+    background: #f9f9f9; /* Define a cor de fundo como um cinza claro para destacar os itens */
+    padding: 20px; /* Adiciona um espaço interno de 20px ao redor do conteúdo de cada item de lista */
+    border-radius: 15px; /* Arredonda os cantos dos itens da lista com um raio de 15px */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Aplica uma sombra suave para dar um efeito de profundidade */
+    list-style-position: inside; /* Garante que os marcadores fiquem dentro do elemento */
+}
+
+strong {
+    color: #0b644e; /* Define a cor do texto em negrito para um verde escuro, destacando-o */
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 10px; /* Reduz o espaço interno ao redor do conteúdo principal para melhor ajuste em telas menores */
+    }
+
+    header {
+        padding: 10px;
+        flex-direction: row; /* Logotipo e imagem lado a lado */
+        align-items: center;
+        justify-content: center; /* Centraliza horizontalmente os itens */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Reduz tamanho da fonte para melhor legibilidade em dispositivos móveis */
+        padding: 10px 0; /* Espaço adicional para legibilidade */
+        white-space: normal; /* Permite quebra de linha para que o texto se ajuste */
+        margin-top: 10px; /* Adiciona espaço acima do texto */
+    }
+
+    .logo-direita, header img {
+        width: 80px; /* Ajustar o tamanho das imagens em dispositivos móveis */
+        height: auto;
+    }
+
+    button {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    #resultado {
+        column-count: 1; /* Uma coluna em dispositivos móveis */
+    }
+
+    #resultado li {
+        text-align: center; /* Centraliza o texto das universidades em dispositivos móveis */
+    }
+}
+
+@media (min-width: 601px) {
+    #resultado {
+        column-count: 3; /* Três colunas em desktops */
+        column-gap: 25px; /* Espaço entre colunas */
+    }
+}
+
+.aprovado {
+    color: green; /* Define a cor do texto como verde para indicar aprovação */
+    font-weight: bold; /* Destaca o texto tornando-o em negrito */
+}
+
+.nao-aprovado {
+    color: red; /* Define a cor do texto como vermelho para indicar não aprovação */
+    font-weight: bold; /* Destaca o texto tornando-o em negrito */
+}
+
+#resultado {
+    list-style-type: none; /* Remove os marcadores de lista padrão */
+    padding: 0; /* Remove o padding padrão do contêiner de resultados */
+}
